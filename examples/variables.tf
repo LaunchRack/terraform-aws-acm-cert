@@ -13,22 +13,7 @@ variable "name" {
   type        = string
 }
 
-variable "owned_by" {
-  description = "The name of the company who owns the resources."
-  type        = string
-}
-
-variable "managed_by" {
-  description = "The name of the tool that manages the resources."
-  type        = string
-}
-
-variable "env" {
-  description = "The environment in which the resources are provisioned."
-  type        = string
-}
-
-variable "pipeline_id" {
-  description = "The CI pipeline id number."
-  type        = number
+variable "tags" {
+  description = "A map of tags for the resources."
+  type        = map(string)
 }

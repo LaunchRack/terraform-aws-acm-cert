@@ -2,16 +2,7 @@ resource "aws_acm_certificate" "certificate" {
   domain_name               = var.domain_name
   subject_alternative_names = ["*.${var.domain_name}"]
   validation_method         = "DNS"
-  tags = merge(
-    {
-      Name        = var.name
-      OwnedBy     = var.owned_by
-      ManagedBy   = var.managed_by
-      Environment = var.env
-      Pipeline_Id = var.pipeline_id
-    },
-    var.tags,
-  )
+  tags                      = var.tags
 }
 
 resource "aws_route53_record" "validation_record" {
