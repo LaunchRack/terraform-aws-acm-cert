@@ -5,4 +5,4 @@
 - Fixing tags
 
 # 0.1.2
-- Updated Readme to new format
+- Updated Readme format
